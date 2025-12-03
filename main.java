@@ -1,38 +1,36 @@
+import java.io.IOException;
+import java.util.Scanner;
+import temps.mtam;
+import temps.whyb;
 
-import lyrcs.lsa;
-import lyrcs.tya;
+public class Main {
+    public static void main(String[] args) throws IOException, InterruptedException {
+        Scanner s = new Scanner(System.in);
+        String n = "\033[1D";
+        String c = "\033c";
+        int m = 1000;
+        System.out.print(c);
+        System.out.println("===============================");
+        System.out.println("|| Short Music Lyrics Player ||");
+        System.out.println("===============================");
+        System.out.println("\n1. Play 'Where Have You Been' by Rihanna");
+        System.out.println("2. Play 'Menunggumu' by Tiara Amora Mahesa Music");
 
-public class main {
-    public static void main(String[] args) throws InterruptedException {
-        System.out.print("\033c");
-        System.out.println("Rihanna - Where Have You Been");
+        System.out.print("\n>>> ");
+        int i = s.nextInt();
+        if (i == 1) {
+            System.out.print("\nPlaying 'Where Have You Been' by Rihanna...   ");
+            System.out.print("3");Thread.sleep(m);System.out.print(n);System.out.print("2");Thread.sleep(m);System.out.print(n);System.out.print("1");Thread.sleep(m);System.out.print("0"+c);
+            whyb.rihanna(args);
+        }
+        else if (i ==2) {
+            System.out.print("\nPlaying 'Menunggumu' by Tiara Amora Mahesa Music...   ");
+            System.out.print("3");Thread.sleep(m);System.out.print(n);System.out.print("2");Thread.sleep(m);System.out.print(n);System.out.print("1");Thread.sleep(m);System.out.print("0"+c);
+            mtam.amora(args);
+        }
 
-        System.out.println("=============================================");
-        System.out.println("||                                         ||");
-        System.out.println("||                                         ||");
-        System.out.println("||                                         ||");
-        System.out.println("||                                         ||");
-        System.out.println("||                                         ||");
-        System.out.println("||                                         ||");
-        System.out.println("||                                         ||");
-        System.out.println("||                                         ||");
-        System.out.println("||                                         ||");
-        System.out.println("||                                         ||");
-        System.out.println("=============================================");
-        
-        System.out.println("\033[11A");
-        System.out.print("\033[3C");
-        final var blue = "\u001B[96m";
-        System.out.print(blue);
-            lsa.main(args);
-        System.out.print("\n\n");
-            tya.main(args);
-        System.out.print("\n\n");
-            tya.main(args);
-        Thread.sleep(20000);
-        System.out.println("\n\n");
-        final String reset = "\u001B[0m";
+        s.close();
+        final var reset = "\u001B[0m";
         System.out.print(reset);
-
-    }
+    }       
 }

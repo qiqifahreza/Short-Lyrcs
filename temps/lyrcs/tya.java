@@ -1,4 +1,4 @@
-package lyrcs;
+package temps.lyrcs;
 public class tya {
     public static void main(String[] args) throws InterruptedException {
         System.out.print("\033[3C");

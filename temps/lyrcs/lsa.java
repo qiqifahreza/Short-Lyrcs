@@ -1,4 +1,4 @@
-package lyrcs;
+package temps.lyrcs;
 public class lsa {
     public static void main(String[] args) throws InterruptedException {
 
